@@ -1,0 +1,132 @@
+int trig = 10;
+int echo = 11;
+int led1 = 13;
+int led2 = 12;
+int led3 = 9;
+int led4 = 8;
+int led5 = 7;
+int led6 = 6;
+int led7 = 5;
+int led8 = 4;
+int led9 = 3;
+int led10 = 2;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, INPUT);
+  pinMode(10, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(2, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  long duration, distance;
+  digitalWrite(trig, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trig, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trig, LOW);
+  duration = pulseIn(echo, HIGH);
+  distance = (duration / 2) / 29.1;
+
+  if (distance >= 10)
+  {
+    digitalWrite(led1, HIGH);
+  }
+  else
+  {
+    digitalWrite(led1, LOW);
+  }
+
+  if (distance >= 20)
+  {
+    digitalWrite(led2, HIGH);
+  }
+  else
+  {
+    digitalWrite(led2, LOW);
+  }
+
+  if (distance >= 30)
+  {
+    digitalWrite(led3, HIGH);
+  }
+  else
+  {
+    digitalWrite(led3, LOW);
+  }
+
+  if (distance >= 40)
+  {
+    digitalWrite(led4, HIGH);
+  }
+  else
+  {
+    digitalWrite(led4, LOW);
+  }
+
+  if (distance >= 50)
+  {
+    digitalWrite(led5, HIGH);
+  }
+  else
+  {
+    digitalWrite(led5, LOW);
+  }
+
+  if (distance >= 60)
+  {
+    digitalWrite(led6, HIGH);
+  }
+  else
+  {
+    digitalWrite(led6, LOW);
+  }
+
+  if (distance >= 70)
+  {
+    digitalWrite(led7, HIGH);
+  }
+  else
+  {
+    digitalWrite(led7, LOW);
+  }
+
+  if (distance >= 80)
+  {
+    digitalWrite(led8, HIGH);
+  }
+  else
+  {
+    digitalWrite(led8, LOW);
+  }
+
+  if (distance >= 90)
+  {
+    digitalWrite(led9, HIGH);
+  }
+  else
+  {
+    digitalWrite(led9, LOW);
+  }
+
+  if (distance >= 100)
+  {
+    digitalWrite(led10, HIGH);
+  }
+  else
+  {
+    digitalWrite(led10, LOW);
+  }
+
+}
